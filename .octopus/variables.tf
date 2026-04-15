@@ -2,7 +2,6 @@ variable "address" {
   type        = string
   description = "Octopus Deploy server URL"
   default     = "https://tecknosap.octopus.app"
-  # default = "https://octopus.office.interxion.net"
 }
 
 variable "api_key" {
