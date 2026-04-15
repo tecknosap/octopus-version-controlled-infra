@@ -37,22 +37,22 @@ resource "octopusdeploy_project" "app" {
   is_version_controlled = true
   git_library_persistence_settings {
     git_credential_id = octopusdeploy_git_credential.app.id
-    url =               "<git-url>"
+    url =               "https://github.com/tecknosap/octopus-version-controlled-infra"
     default_branch      = "main"
     base_path           = ".octopus"
     protected_branches  = []
   }
 }
 
-# resource "octopusdeploy_project" "this" {
-#   name             = var.project_name
-#   description      = var.project_description
-#   project_group_id = octopusdeploy_project_group.this.id
+resource "octopusdeploy_project" "this" {
+  name             = var.project_name
+  description      = var.project_description
+  project_group_id = octopusdeploy_project_group.this.id
 
-#   lifecycle_id = local.lifecycle_ids[var.lifecycle_name]
+  lifecycle_id = local.lifecycle_ids[var.lifecycle_name]
 
-#   included_library_variable_sets = sort([
-#     for name in var.variable_set_names :
-#     local.variable_set_ids[name]
-#   ])
-# }
+  included_library_variable_sets = sort([
+    for name in var.variable_set_names :
+    local.variable_set_ids[name]
+  ])
+}
