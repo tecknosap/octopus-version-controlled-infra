@@ -1,0 +1,75 @@
+variable "ApimTemplatesPackageId" {
+    value "#{ProductName}-apim-templates" {
+        description = ""
+    }
+}
+
+variable "AppConfigName" {
+    value "inxn-shared-app-config" {
+        description = ""
+    }
+}
+
+variable "ComponentDependencies" {
+    value "['ArmSharedInfrastructure','Service - CustomerAuthorisation','Service - Login']" {
+        description = ""
+    }
+}
+
+variable "CosmosResourceGroupName" {
+    value "#{InxnPrefix}-#{AzureEnvironmentName}-#{CosmosName}" {
+        description = ""
+    }
+}
+
+variable "DotNetRuntimeVersion" {
+    value "8" {
+        description = ""
+    }
+}
+
+variable "FunctionRuntime" {
+    value "dotnet-isolated" {
+        description = ""
+    }
+}
+
+variable "FunctionsRuntimeVersion" {
+    value "4" {
+        description = ""
+    }
+}
+
+variable "NetFrameworkVersion" {
+    value "v8.0" {
+        description = ""
+    }
+}
+
+variable "PackageId" {
+    value "SeedFunction" {
+        description = ""
+    }
+}
+
+variable "ProductName" {
+    value "seed" {
+        description = ""
+    }
+}
+
+variable "StorageAccountName" {
+    value "seedfunc" {
+        description = ""
+    }
+
+    value "seedfunc#{AzureEnvironmentName}" {
+        description = ""
+    }
+}
+
+variable "StorageDnsEndpointType" {
+    value "standard" {
+        description = ""
+    }
+}

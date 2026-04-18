@@ -1,0 +1,319 @@
+step "add-subscriptions-to-service-bus-topics" {
+    name = "Add subscriptions to service bus topics"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "create-function-app" {
+    name = "Create function app"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "get-principal-id" {
+    name = "Get Principal Id"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "grant-keyvault-access-to-function-app" {
+    name = "Grant KeyVault access to function app"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "grant-shared-keyvault-access-to-function-app" {
+    name = "Grant Shared KeyVault access to function app"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "restrict-app-insights-access-to-function-app" {
+    name = "Restrict App Insights Access to Function App"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "function-app-vnet-integration" {
+    name = "Function App VNET Integration"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "grant-vnet-servicetag-access-to-function-app" {
+    name = "Grant VNET ServiceTag Access to Function app"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "create-function-app-slot" {
+    name = "Create Function app slot"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "get-slot-principal-id" {
+    name = "Get Slot Principal Id"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "slot-grant-keyvault-access-to-function-app" {
+    name = "Slot - Grant KeyVault access to function app"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "slot-grant-shared-keyvault-access-to-function-app" {
+    name = "Slot - Grant Shared KeyVault access to function app"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "add-environment-variables-from-app-config" {
+    name = "Add Environment Variables from App Config"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "publish-package-to-function-app" {
+    name = "Publish Package to Function app"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "slot-warmup" {
+    name = "Slot Warmup"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "swap-function-slot" {
+    name = "Swap Function Slot"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "grant-apim-access-to-function-app" {
+    name = "Grant APIM Access to Function App"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "deploy-apim-templates" {
+    name = "Deploy APIM templates"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "add-healthchecks" {
+    name = "Add Healthchecks"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
+
+step "set-tags" {
+    name = "Set Tags"
+
+    action {
+        action_type = "Octopus.AzurePowerShell"
+        properties = {
+            Octopus.Action.Azure.AccountId = "#{AzureAccount}"
+            Octopus.Action.RunOnServer = "False"
+            Octopus.Action.Script.Script.Syntax = "PowerShell"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'Running...'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            OctopusUseBundledTooling = "True"
+        }
+    }
+}
